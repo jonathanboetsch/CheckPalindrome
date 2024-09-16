@@ -4,7 +4,7 @@ public class CheckForPalindrome {
   public static void main (String[] args) {
 
 String original, reverse = "";
-
+Scanner sc = new Scanner(System.in);
 
   }
 }
