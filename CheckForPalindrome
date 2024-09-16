@@ -7,6 +7,7 @@ String original, reverse = "";
 Scanner sc = new Scanner(System.in);
 System.out.print("Enter a string/number to check if it is a palindrome: ");
 original = sc.nextLine();
+reverse = "";
 int length = original.length();
 for (int i = length - 1; i >= 0; i--);
     reverse = reverse + original.charAt(i);
