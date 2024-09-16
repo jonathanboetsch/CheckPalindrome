@@ -1,0 +1,7 @@
+import java.util.Scanner;
+
+public class CheckForPalindrome {
+  public static void main (String[] args) {
+
+  }
+}
