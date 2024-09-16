@@ -6,5 +6,7 @@ public class CheckForPalindrome {
 String original, reverse = "";
 Scanner sc = new Scanner(System.in);
 System.out.print("Enter a string/number to check if it is a palindrome: ");
+original = sc.nextLine();
+int length = original.length();
   }
 }
