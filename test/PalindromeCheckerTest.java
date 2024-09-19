@@ -30,4 +30,9 @@ public class PalindromeCheckerTest {
         assertTrue(PalindromeChecker.isPalindrome("A man, a plan, a canal, Panama"
                                                  .replaceAll("[^A-Za-z0-9]", "").toLowerCase()));
     }
+
+    @Test
+    void shouldNotReverseString(){
+        assertNotEquals("palindrome", PalindromeChecker.reverseString("palindrome"));
+    }
 }
