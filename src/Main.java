@@ -41,6 +41,12 @@ public class Main {
 
     public static String textFormating(String text){
         text = text.replaceAll("\\s", "");
+        text = text.replaceAll("\\s", "");
+        text = text.replaceAll("!", "");
+        text = text.replaceAll(",", "");
+        text = text.replaceAll("\\.", "");
+        text = text.replaceAll("'", "");
+        text = text.replaceAll("_", "");
         text = text.toLowerCase();
         return text;
     }
