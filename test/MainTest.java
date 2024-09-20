@@ -1,39 +1,30 @@
-
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PalindromeCheckerTest {
+public class MainTest {
     @Test
-    void shouldReverseString() {
-        assertEquals("emordnilap", PalindromeChecker.reverseString("palindrome"));
+    @DisplayName("Check for validity of the methods' output against words")
+    public static void testCheckForPalindromeAgainstWords() {
+        assertEquals(true, Main.checkForPalindrome("coloc"));
+        assertEquals(true, Main.checkForPalindrome("kayak"));
+        assertEquals(true, Main.checkForPalindrome("noon"));
     }
 
     @Test
-    void shouldResolveAsPalindrome() {
-        assertTrue(PalindromeChecker.isPalindrome("kayak"));
+    @DisplayName("Check for validity of the methods' output against sentences")
+    public static void testCheckForPalindromeAgainstSentences() {
+        assertEquals(false, Main.checkForPalindrome("Never odd or even"));
+        assertEquals(false, Main.checkForPalindrome("Don’t nod"));
+        assertEquals(false, Main.checkForPalindrome("A man, a plan, a canal, Panama!"));
+        assertEquals(false, Main.checkForPalindrome("Step on no pets!"));
     }
-
     @Test
-    void shouldNotResolveAsPalindrome() {
-        assertFalse(PalindromeChecker.isPalindrome("mesopotamia"));
-    }
-
-    @Test
-    void shouldHandleEmptyString() {
-        // Kollar om en tom strän räknas som ett palindrom
-        assertTrue(PalindromeChecker.isPalindrome(""));
-    }
-
-    @Test
-    void shouldHandleSpecialCharacters() {
-        // Kollar att palindrom funkar även om strängen har mellanslag och specialtecken
-        assertTrue(PalindromeChecker.isPalindrome("A man, a plan, a canal, Panama"
-                                                 .replaceAll("[^A-Za-z0-9]", "").toLowerCase()));
-    }
-
-    @Test
-    void shouldNotReverseString(){
-        assertNotEquals("palindrome", PalindromeChecker.reverseString("palindrome"));
+    @DisplayName("Check for validity of the methods' output against numbers")
+    public static void testCheckForPalindromeAgainstNumbers() {
+        assertEquals(false, Main.checkForPalindrome("888"));
+        assertEquals(false, Main.checkForPalindrome("1,234,321"));
+        assertEquals(false, Main.checkForPalindrome("2/2/22"));
     }
 }
