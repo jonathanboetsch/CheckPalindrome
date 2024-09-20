@@ -40,8 +40,6 @@ public class Main {
     }
 
     public static String textFormating(String text){
-        text = text.replaceAll("\\s", "");
-        text = text.toLowerCase();
-        return text;
+        return text.replaceAll("[\\s\\p{P}\\p{Z}]", "").toLowerCase();
     }
 }
