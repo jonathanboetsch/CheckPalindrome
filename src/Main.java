@@ -12,4 +12,17 @@ public class Main {
             }
         }
     }
+    
+    public static boolean checkIfPalindrome(String originalWordOrNumber){
+        for(int i=0; i<originalWordOrNumber.length()-1; i++){
+            if (originalWordOrNumber.charAt(i) == originalWordOrNumber.charAt(originalWordOrNumber.length()-i-1)){
+                if (i == originalWordOrNumber.length()-i-1){
+                    return true;
+                }
+            } else {
+                return false;
+            }
+        }
+        return false;
+    }
 }
