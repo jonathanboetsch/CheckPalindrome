@@ -31,6 +31,9 @@ public class Main {
         String reverse = toReverse(originalWordOrNumber);
         reverse = reverse.replaceAll("\\s", "");
 
+        reverse = reverse.toLowerCase();
+        originalWordOrNumber = originalWordOrNumber.toLowerCase();
+        
         if (reverse.equals(originalWordOrNumber.replaceAll("\\s", ""))){
             return true;
         }
