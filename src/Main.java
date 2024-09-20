@@ -28,15 +28,20 @@ public class Main {
     }
 
     public static boolean checkForPalindrome(String originalWordOrNumber){
-        String reverse = toReverse(originalWordOrNumber);
-        reverse = reverse.replaceAll("\\s", "");
 
-        reverse = reverse.toLowerCase();
-        originalWordOrNumber = originalWordOrNumber.toLowerCase();
-        
-        if (reverse.equals(originalWordOrNumber.replaceAll("\\s", ""))){
+        String reverse = toReverse(originalWordOrNumber);
+        reverse = textFormating(reverse);
+        originalWordOrNumber = textFormating(originalWordOrNumber);
+
+        if (reverse.equals(originalWordOrNumber)){
             return true;
         }
         return false;
+    }
+
+    public static String textFormating(String text){
+        text = text.replaceAll("\\s", "");
+        text = text.toLowerCase();
+        return text;
     }
 }
