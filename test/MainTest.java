@@ -30,11 +30,11 @@ public class TestMain {
     }
 
     @Test
-    @DisplayName("Check cleanText() output")
+    @DisplayName("Check textFormating() output")
     public void testCleanText() {
-        assertEquals("neveroddoreven", Main.formatText("Never odd or even"));
-        assertEquals("dontnod", Main.formatText("Don’t nod"));
-        assertEquals("amanaplanacanalpanama", Main.formatText("A man, a plan, a canal, Panama!"));
+        assertEquals("neveroddoreven", Main.textFormating("Never odd or even"));
+        assertEquals("dontnod", Main.textFormating("Don’t nod"));
+        assertEquals("amanaplanacanalpanama", Main.textFormating("A man, a plan, a canal, Panama!"));
     }
 
     @Test
