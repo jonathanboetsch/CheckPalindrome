@@ -6,9 +6,8 @@ public class Main {
             System.out.println("Ange ett nummer eller string som du anser är en palindrom");
             Scanner in = new Scanner(System.in);
             String input = in.nextLine();
-            String reverse = toReverse(input);
             
-            if (!checkForPalindrome(input, reverse)) {
+            if (!checkForPalindrome(input)) {
                 System.out.println(input + " är inte en palindrom, testa igen");
             } else {
                 System.out.println(input + " är en palindrom.");
@@ -28,7 +27,8 @@ public class Main {
         return reverse;
     }
 
-    public static boolean checkForPalindrome(String originalWordOrNumber, String reverse){
+    public static boolean checkForPalindrome(String originalWordOrNumber){
+        String reverse = toReverse(originalWordOrNumber);
         reverse = reverse.replaceAll("\\s", "");
 
         if (reverse.equals(originalWordOrNumber.replaceAll("\\s", ""))){
