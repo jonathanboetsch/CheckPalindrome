@@ -18,6 +18,8 @@ public class Main {
             if (originalWordOrNumber.charAt(i) == originalWordOrNumber.charAt(originalWordOrNumber.length()-i-1)){
                 if (i == originalWordOrNumber.length()-i-1){
                     return true;
+                } else if (i == originalWordOrNumber.length()-i){
+                    return true;
                 }
             } else {
                 return false;
