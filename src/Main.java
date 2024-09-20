@@ -14,8 +14,25 @@ public class Main {
             }
         }
     }
-    
+
     public static boolean checkForPalindrome(String originalWordOrNumber){
+        originalWordOrNumber.toCharArray();
+        char letter;
+        String reverse = "";
+        for(int i=0; i<originalWordOrNumber.length(); i++){
+            letter = originalWordOrNumber.charAt(i);
+            reverse = letter + reverse;
+        }
+
+        reverse = reverse.replaceAll("\\s", "");
+
+        if (reverse.equals(originalWordOrNumber.replaceAll("\\s", ""))){
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean checkForPalindrome2(String originalWordOrNumber){
         for(int i=0; i<originalWordOrNumber.length()-1; i++){
             if (originalWordOrNumber.charAt(i) == originalWordOrNumber.charAt(originalWordOrNumber.length()-i-1)){
                 if (i == originalWordOrNumber.length()-i-1){
